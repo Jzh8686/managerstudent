@@ -1,0 +1,18 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/score?serverTimezone=UTC
+    username: root
+    password: why594309020
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+  jpa:
+    show-sql: true
+    thymeleaf:
+    cache: false
+logging:
+  level:
+    com:
+      example: debug
+
+
