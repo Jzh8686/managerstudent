@@ -27,6 +27,7 @@ public class StudentService{
         QStudent student=QStudent.student;
         Predicate predicate=student.name.startsWith(name).and(student.age.eq(a));
       Iterable<Student> students=studentReposity.findAll(predicate);
+      System.out.println("修改一句话");
       return students;
 
     }
