@@ -1,7 +1,9 @@
 package com.example.majormanage.controller;
 
 
+import com.example.majormanage.entity.Person;
 import com.example.majormanage.entity.Student;
+import com.example.majormanage.repository.PersonRepository;
 import com.example.majormanage.repository.StudentRepository;
 import com.example.majormanage.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ public class MajorController {
     StudentRepository studentReposity;
     @Autowired
     StudentService studentService;
+    @Autowired
+    PersonRepository personRepository;
     //登陆
     @RequestMapping("login")
     public String login(Model model,@RequestParam String username, @RequestParam String password, HttpSession session){
@@ -33,9 +37,14 @@ public class MajorController {
         return "index";
         }
     }
+    @RequestMapping("/peoplesss")
+    @ResponseBody
+    public List<Person> getAll(){
+        return personRepository.findAll();
+    }
     //查询某个学生
     //把查询结果进行缓存，默认的key为数据的主键
-  @Cacheable(cacheNames = "{student}")
+   /* @Cacheable(cacheNames = "{student}")*/
     @RequestMapping("student/{id}")
     @ResponseBody
     public Student getOne(@PathVariable("id") Student student) {
