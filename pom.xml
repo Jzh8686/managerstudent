@@ -41,7 +41,7 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>rg.springframework.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>

@@ -1,15 +1,17 @@
 package com.example.majormanage.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 /*@JsonIgnoreProperties(value = "hibernateLazyInitializer")*/
 @Proxy(lazy = false)
-public class Student {
+public class Student implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;

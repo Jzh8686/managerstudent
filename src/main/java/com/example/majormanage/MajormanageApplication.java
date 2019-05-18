@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-@EnableCaching
+/*@EnableCaching */
 public class MajormanageApplication {
 
     public static void main(String[] args) {

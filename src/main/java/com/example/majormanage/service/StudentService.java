@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.List;
-
+import java.util.Optional;
 
 
 @Service
@@ -30,5 +30,9 @@ public class StudentService{
       System.out.println("修改一句话");
       return students;
 
+    }
+    public Student getOne(int id){
+        Student id1 = studentReposity.getOne(id);
+        return id1;
     }
 }

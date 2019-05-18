@@ -2,7 +2,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/people?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/score?serverTimezone=UTC
     username: root
     password: why594309020
     type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
@@ -13,8 +13,10 @@ spring:
   redis:
     host: localhost
     port: 6379
+  cache:
+    redis:
+      time-to-live:  600s
 logging:
   level:
     com:
       example: debug
-
